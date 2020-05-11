@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     OAuthModule.forRoot({
       resourceServer: {
-          allowedUrls: ['https://localhost:44322/api'],
+          allowedUrls: ['https://bc2webapi.azurewebsites.net/api'],
           sendAccessToken: true
       }
     })

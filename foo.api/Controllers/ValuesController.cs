@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace foo.api.Controllers
 {
@@ -13,7 +14,7 @@ namespace foo.api.Controllers
       public ActionResult<string> Get()
       {
          //var userClaims = User.Identity as System.Security.Claims.ClaimsIdentity;
-         var wellcome = $"Hello buddy. Your Runtime Version is: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}";
+         var wellcome = $"Hello buddy. Api call performed to:  https://bc2webapi.azurewebsites.net/. Your Runtime Version is: {System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription}";
 
          return wellcome;
       }      

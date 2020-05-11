@@ -46,7 +46,7 @@ export class AppComponent {
   given_name: string;
 
   public getMessage() {
-    this.http.get("https://localhost:44322/api/values", { responseType: 'text' })
+    this.http.get("https://bc2webapi.azurewebsites.net/api/values", { responseType: 'text' })
       .subscribe(r => {
         this.message = r
         console.log("message: ", this.message);
@@ -63,12 +63,10 @@ export class AppComponent {
 
   public get claims() {
     let claims = this.oauthService.getIdentityClaims();
-    console.log(claims);
     this.given_name = "No user signed in";
     if(claims){
       this.given_name = claims['given_name'];
     }
-    console.log(claims);
     return claims;
 
   }
